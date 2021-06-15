@@ -4,12 +4,9 @@ from copy import deepcopy
 #Standard .copy() or list[:] make a shallow copy which isn't suitable for my needs
 
 
-#MANUAL:
-# 1. Don't use a letter "v" to stand for a propositional variable
-# 2. Only use following logical constants: "v" for disjunction, "^" for conjunction, "->" for implication, "~" for negation
 
 class AQAS:
-    
+    #user side representation of logical constants
     preOrSymb = "v"
     preAndSymb = "^"
     preImpSymb = "->"
@@ -17,7 +14,7 @@ class AQAS:
     preAllSymbs = preOrSymb + preAndSymb + preImpSymb + preNegSymb
     preSqntSymb = "|-"
 
-
+    #internal representation of logical constants
     orSymb = "o"
     andSymb = "a"
     impSymb = "i"
